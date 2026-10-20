@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mat"
+version = "1.0.0"
+description = "Making Open-Source Text LLM Watermarks Durable Against Merging"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = [
+  "torch",
+  "transformers",
+  "accelerate",
+  "datasets",
+  "huggingface_hub",
+  "numpy",
+  "scipy",
+  "scikit-learn",
+  "pydantic>=2",
+  "pyyaml",
+  "tqdm",
+]
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["mat*"]

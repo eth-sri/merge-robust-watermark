@@ -1,0 +1,12 @@
+model_args: {dtype: bfloat16}
+batch_size: auto
+benchmarks:
+  - {task: arc_challenge, num_fewshot: 25}
+  - {task: mmlu,          num_fewshot: 5}
+  - {task: hellaswag,     num_fewshot: 10}
+  - {task: gsm8k,         num_fewshot: 8}
+  - {task: minerva_math,  num_fewshot: 0}
+  - {task: m_mmlu_de,     num_fewshot: 5}
+  - {task: hellaswag_de,  num_fewshot: 10}
+  - {task: m_mmlu_fr,     num_fewshot: 5}
+  - {task: hellaswag_fr,  num_fewshot: 10}

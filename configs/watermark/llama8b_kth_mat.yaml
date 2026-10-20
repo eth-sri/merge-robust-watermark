@@ -1,0 +1,48 @@
+base_model: meta-llama/Llama-3.1-8B-Instruct
+dtype: bfloat16
+sequence_length: 256
+effective_batch_size: 128
+teacher_on_cpu: true
+
+watermark:
+  type: kth
+  kth_key_size: 256
+  kth_seed: 42
+
+merge_adversary:
+  alpha_min: 0.1
+  alpha_max: 1.0
+
+samples:
+  data_dir: output/samples/llama8b_kth
+  num_samples: 640000
+  prompt_length: 50
+  completion_length: 256
+  batch_size: 32
+  prompt_seed: 1042
+
+datasets:    [MetaMathQA, AlpacaGPT4Deutsch, FineWeb2DE, AlpacaGPT4, CodeAlpaca, OpenWebText]
+proportions: [0.30,       0.20,              0.10,       0.20,       0.10,       0.10]
+
+output_dir: output/watermark/llama8b_kth_mat
+
+training_args:
+  per_device_train_batch_size: 16
+  learning_rate: 1.0e-5
+  max_steps: 5000
+  optim: adamw_torch
+  adam_beta1: 0.9
+  adam_beta2: 0.999
+  adam_epsilon: 1.0e-8
+  weight_decay: 0.0
+  max_grad_norm: 1.0
+  lr_scheduler_type: cosine
+  warmup_steps: 500
+  bf16: true
+  gradient_checkpointing: false
+  save_strategy: steps
+  save_steps: 1000
+  logging_steps: 10
+  dataloader_num_workers: 4
+  remove_unused_columns: false
+  report_to: none

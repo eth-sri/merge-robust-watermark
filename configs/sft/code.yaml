@@ -1,0 +1,18 @@
+dataset: OpenCoderEducational58k
+sequence_length: 2048
+effective_batch_size: 64
+
+training_args:
+  per_device_train_batch_size: 1
+  learning_rate: 2.0e-5
+  num_train_epochs: 2
+  optim: adamw_torch
+  weight_decay: 0.01
+  lr_scheduler_type: cosine
+  bf16: true
+  gradient_checkpointing: true
+  save_strategy: steps
+  save_steps: 500
+  logging_steps: 10
+  dataloader_num_workers: 4
+  report_to: none

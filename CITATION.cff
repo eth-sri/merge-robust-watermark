@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite our paper."
+title: "Making Open-Source Text LLM Watermarks Durable Against Merging"
+license: MIT
+authors:
+  - family-names: Scharff
+    given-names: Luisa
+  - family-names: Gloaguen
+    given-names: Thibaud
+  - family-names: Staab
+    given-names: Robin
+  - family-names: Vechev
+    given-names: Martin
+preferred-citation:
+  type: conference-paper
+  title: "Making Open-Source Text LLM Watermarks Durable Against Merging"
+  authors:
+    - family-names: Scharff
+      given-names: Luisa
+    - family-names: Gloaguen
+      given-names: Thibaud
+    - family-names: Staab
+      given-names: Robin
+    - family-names: Vechev
+      given-names: Martin
+  collection-title: "The Fortieth Annual Conference on Neural Information Processing Systems"
+  conference:
+    name: "NeurIPS 2026"
+  year: 2026
+  url: "https://openreview.net/forum?id=3fkF2rVnDA"

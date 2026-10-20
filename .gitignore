@@ -1,0 +1,12 @@
+__pycache__/
+*.egg-info/
+*.so
+*.c
+output/
+results/
+wandb/
+.venv/
+.venv-sft/
+.DS_Store
+build/
+dist/

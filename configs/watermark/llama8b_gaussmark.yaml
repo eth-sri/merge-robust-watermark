@@ -1,0 +1,5 @@
+base_model: meta-llama/Llama-3.1-8B-Instruct
+layer: model.layers.28.mlp.up_proj.weight
+sigma: 0.01732051
+seed: 1234
+output_dir: output/watermark/llama8b_gaussmark

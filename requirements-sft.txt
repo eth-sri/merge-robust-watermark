@@ -1,0 +1,20 @@
+torch==2.7.0
+triton==3.3.0; platform_system == "Linux" and platform_machine == "x86_64"
+transformers==5.5.4
+trl==1.1.0
+accelerate==1.6.0
+datasets==4.8.4
+huggingface_hub==1.13.0
+pydantic==2.10.6
+pyyaml==6.0.2
+numpy==1.26.4
+scipy==1.15.3
+scikit-learn==1.6.1
+tqdm==4.67.1
+immutables==0.21
+peft==0.18.0
+click==8.2.1
+sentencepiece==0.2.2
+protobuf==4.24.4
+deepspeed==0.18.7
+-e .
